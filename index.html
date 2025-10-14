@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LoadTracker Pro - Turtle Logistics | Modern Logistics Management</title>
+  <meta name="description" content="LoadTracker Pro by Turtle Logistics offers complete logistics management with GPS tracking, OCR scanning, IFTA reporting, and transparent pricing starting at $199/month.">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <style>
+    .gradient-bg {
+      background: linear-gradient(135deg, #eff6ff 0%, #e0e7ff 100%);
+    }
+    
+    @keyframes zoomIn {
+      0% {
+        transform: scale(0.5);
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: scale(15);
+        opacity: 0;
+      }
+    }
+    
+    .zoom-animation {
+      animation: zoomIn 3s ease-in forwards;
+    }
+    
+    #introScreen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+    
+    .hidden {
+      display: none !important;
+    }
+  </style>
+</head>
+<body class="gradient-bg min-h-screen">
+  
+  <!-- Animated Intro Screen -->
+  <div id="introScreen">
+    <img 
+      src="/retro-sign.png" 
+      alt="LoadTracker Pro" 
+      class="zoom-animation max-w-2xl"
+    />
+  </div>
+
+  <!-- Main Content -->
+  <div id="mainContent" class="hidden">
+    <div class="container mx-auto px-4 py-16">
+      <!-- Hero Section -->
+      <div class="text-center mb-12">
+        <div class="mb-6 flex justify-center">
+          <img 
+            src="/turtle-mascot.png" 
+            alt="Turtle Logistics Mascot" 
+            class="w-40 h-40 object-contain"
+          />
+        </div>
+        <div class="mb-4">
+          <p class="text-3xl font-bold text-blue-600 mb-2">
+            Turtle Logistics
+          </p>
+          <p class="text-sm text-gray-500">Melissa, Texas</p>
+        </div>
+        
+        <!-- Retro Neon Sign -->
+        <div class="mb-6 flex justify-center">
+          <img 
+            src="/neon-sign.png" 
+            alt="LoadTracker Pro" 
+            class="w-96 object-contain"
+          />
+        </div>
+        
+        <p class="text-xl text-gray-600 mb-2">
+          Complete Logistics Management for Modern Trucking Companies
+        </p>
+        <p class="text-lg text-blue-600 font-semibold">
+          Starting at $199/month • No Setup Fees • Cancel Anytime
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
+        <!-- Features Column -->
+        <div class="space-y-6">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">
+            What's Included
+          </h2>
+
+          <div class="space-y-4">
+            <div class="flex gap-3 items-start">
+              <div class="mt-1">
+                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900">Real-Time Fleet Tracking</h3>
+                <p class="text-sm text-gray-600">GPS tracking, HERE Maps integration, weather overlays, and fuel station finder</p>
+              </div>
+            </div>
+
+            <div class="flex gap-3 items-start">
+              <div class="mt-1">
+                <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900">Smart Document Processing</h3>
+                <p class="text-sm text-gray-600">AI-powered OCR scans rate confirmations, BOL validation, automated invoicing</p>
+              </div>
+            </div>
+
+            <div class="flex gap-3 items-start">
+              <div class="mt-1">
+                <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900">IFTA Reporting</h3>
+                <p class="text-sm text-gray-600">Automatic state-by-state mileage tracking with deadhead miles calculation</p>
+              </div>
+            </div>
+
+            <div class="flex gap-3 items-start">
+              <div class="mt-1">
+                <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15.536a5 5 0 001.414 1.414m2.828-9.9a9 9 0 012.536 12.728"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900">Road Tour Feature</h3>
+                <p class="text-sm text-gray-600">GPS-triggered audio narration of 222,969 historical markers - our exclusive feature!</p>
+              </div>
+            </div>
+
+            <div class="flex gap-3 items-start">
+              <div class="mt-1">
+                <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900">Driver Pay Management</h3>
+                <p class="text-sm text-gray-600">Automatic driver pay calculations (percentage or per-mile), aging reports, and analytics</p>
+              </div>
+            </div>
+
+            <div class="flex gap-3 items-start">
+              <div class="mt-1">
+                <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900">Automated Invoicing</h3>
+                <p class="text-sm text-gray-600">Generate professional invoices instantly with detailed breakdowns and email delivery</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mt-8">
+            <h3 class="font-semibold text-gray-900 mb-3">Simple, Predictable Pricing</h3>
+            <div class="space-y-2 text-sm text-gray-700">
+              <p><strong>Starter:</strong> $199/mo - Up to 5 trucks within plan limits</p>
+              <p><strong>Professional:</strong> $299/mo - Up to 15 trucks within plan limits</p>
+              <p><strong>Enterprise:</strong> $399/mo+ - 25+ trucks with custom limits</p>
+            </div>
+            <p class="text-xs text-gray-600 mt-3 font-semibold">
+              Know your exact cost when you stay within your plan limits!
+            </p>
+          </div>
+        </div>
+
+        <!-- Demo Form Column -->
+        <div>
+          <div class="bg-white shadow-2xl border-2 border-blue-200 rounded-lg overflow-hidden">
+            <div class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-6">
+              <h2 class="text-2xl font-bold mb-2">Start Your Free Demo</h2>
+              <p class="text-blue-100">No credit card required. Full access to all features for 24 hours.</p>
+            </div>
+            <div class="p-6">
+              <form id="demoForm" class="space-y-4">
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-1">Full Name *</label>
+                  <input 
+                    type="text" 
+                    name="fullName" 
+                    required 
+                    placeholder="John Smith"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-1">Email Address *</label>
+                  <input 
+                    type="email" 
+                    name="email" 
+                    required 
+                    placeholder="john@trucking.com"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-1">Company Name *</label>
+                  <input 
+                    type="text" 
+                    name="companyName" 
+                    required 
+                    placeholder="ABC Trucking LLC"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                  <input 
+                    type="tel" 
+                    name="phoneNumber" 
+                    placeholder="(555) 123-4567"
+                    class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold text-lg py-3 rounded-md transition-colors"
+                >
+                  Start Free Demo Now →
+                </button>
+
+                <p class="text-xs text-center text-gray-500 mt-4">
+                  All demo data automatically deleted when you log out. Try it risk-free!
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Transparent Pricing Section -->
+      <div class="max-w-6xl mx-auto mt-16">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">
+            100% Transparent Pricing
+          </h2>
+          <p class="text-xl text-gray-600">
+            No hidden fees. No surprises. Fixed pricing when you stay within your plan limits.
+          </p>
+        </div>
+
+        <!-- Pricing Tiers -->
+        <div class="grid md:grid-cols-3 gap-6 mb-12">
+          <!-- Starter -->
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <div class="text-center pb-4">
+              <h3 class="text-2xl font-bold mb-2">Starter</h3>
+              <div class="text-4xl font-bold text-blue-600">$199<span class="text-lg text-gray-600">/mo</span></div>
+              <p class="text-sm text-gray-600 mt-2">Perfect for small fleets</p>
+            </div>
+            <ul class="space-y-3 text-sm mt-6">
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                <span><strong>Up to 5 trucks</strong> within plan limits</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                <span><strong>5,000 routing transactions/month</strong></span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                <span>50 rate con scans/month</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                <span>500 SMS notifications/month</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                <span><strong>Unlimited</strong> invoices & emails</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Professional -->
+          <div class="bg-white border-2 border-blue-500 rounded-lg p-6 shadow-lg relative">
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+              Most Popular
+            </div>
+            <div class="text-center pb-4">
+              <h3 class="text-2xl font-bold mb-2">Professional</h3>
+              <div class="text-4xl font-bold text-blue-600">$299<span class="text-lg text-gray-600">/mo</span></div>
+              <p class="text-sm text-gray-600 mt-2">Best for growing companies</p>
+            </div>
+            <ul class="space-y-3 text-sm mt-6">
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                <span><strong>Up to 15 trucks</strong> within plan limits</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                <span><strong>15,000 routing transactions/month</strong></span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                <span>200 rate con scans/month</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                <span>2,000 SMS notifications/month</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                <span><strong>Unlimited</strong> invoices & emails</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                <span>Priority email support</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Enterprise -->
+          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+            <div class="text-center pb-4">
+              <h3 class="text-2xl font-bold mb-2">Enterprise</h3>
+              <div class="text-4xl font-bold text-blue-600">$399<span class="text-lg text-gray-600">+</span></div>
+              <p class="text-sm text-gray-600 mt-2">Large fleets, high volume</p>
+            </div>
+            <ul class="space-y-3 text-sm mt-6">
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                <span><strong>25+ trucks</strong> within plan limits</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                <span><strong>25,000 routing transactions/month</strong></span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                <span>500 rate con scans/month</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                <span>5,000 SMS notifications/month</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                <span><strong>Unlimited</strong> invoices & emails</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                <span>24/7 phone & email support</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Overage Pricing -->
+        <div class="bg-yellow-50 border-2 border-yellow-300 rounded-lg p-6 mb-12">
+          <h3 class="text-xl font-bold text-yellow-800 mb-4">
+            Overage Pricing - Transparent & Fair
+          </h3>
+          <p class="text-gray-700 mb-4">
+            If you exceed your monthly limits, here's exactly what you'll pay:
+          </p>
+          <div class="grid md:grid-cols-2 gap-4 text-sm">
+            <div class="bg-white p-4 rounded-lg">
+              <p class="font-semibold text-gray-900 mb-2">Rate Con Scans (OCR)</p>
+              <p class="text-gray-600 font-bold">$0.10 per additional scan</p>
+              <p class="text-xs text-gray-500 mt-1">Actual cost of Google Document AI processing</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg">
+              <p class="font-semibold text-gray-900 mb-2">SMS Notifications</p>
+              <p class="text-gray-600 font-bold">$0.004 per additional SMS</p>
+              <p class="text-xs text-gray-500 mt-1">Actual cost via Telnyx carrier service</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg">
+              <p class="font-semibold text-gray-900 mb-2">Email Invoices</p>
+              <p class="text-gray-600 font-bold">$0.0009 per email</p>
+              <p class="text-xs text-gray-500 mt-1">Actual cost via Resend email delivery</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg">
+              <p class="font-semibold text-gray-900 mb-2">GPS/Maps Calls</p>
+              <p class="text-gray-600 font-bold">Unlimited - Always Free</p>
+              <p class="text-xs text-gray-500 mt-1">Track all you want - no additional charges!</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Custom Features -->
+        <div class="bg-gradient-to-r from-purple-50 to-blue-50 border-2 border-purple-200 rounded-lg p-6 mb-12">
+          <div class="flex items-start gap-4">
+            <div>
+              <svg class="w-12 h-12 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-3">
+                Need a Custom Feature?
+              </h3>
+              <p class="text-gray-700 mb-4">
+                We'll develop and integrate features specifically for your business needs.
+              </p>
+              <div class="bg-white rounded-lg p-4 border-2 border-purple-300">
+                <p class="text-3xl font-bold text-purple-600 mb-2">$110 <span class="text-lg font-normal text-gray-600">one-time fee</span></p>
+                <p class="text-sm text-gray-600">Per custom feature development & integration</p>
+              </div>
+              <p class="text-sm text-gray-600 mt-3">
+                Examples: Custom report formats, specific integrations, workflow automation, specialized tracking features
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Demo Video Section -->
+        <div class="bg-white rounded-lg p-8 shadow-lg mb-12">
+          <h3 class="text-3xl font-bold text-gray-900 mb-4 text-center">
+            See LoadTracker Pro in Action
+          </h3>
+          <p class="text-center text-gray-600 mb-6">
+            Watch this quick walkthrough of the system's key features and workflow
+          </p>
+          <div class="aspect-video bg-gradient-to-br from-blue-100 to-indigo-100 rounded-lg flex items-center justify-center border-2 border-blue-300">
+            <div class="text-center">
+              <svg class="w-24 h-24 text-blue-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <p class="text-gray-600 text-lg">Demo Video Coming Soon</p>
+              <p class="text-gray-500 text-sm mt-2">Full system walkthrough showing load management, GPS tracking, OCR scanning, and reporting</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Intro animation
+    setTimeout(() => {
+      document.getElementById('introScreen').style.display = 'none';
+      document.getElementById('mainContent').classList.remove('hidden');
+    }, 3000);
+
+    // Handle form submission
+    document.getElementById('demoForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const formData = new FormData(e.target);
+      const data = {
+        fullName: formData.get('fullName'),
+        email: formData.get('email'),
+        companyName: formData.get('companyName'),
+        phoneNumber: formData.get('phoneNumber')
+      };
+
+      const button = e.target.querySelector('button[type="submit"]');
+      const originalText = button.textContent;
+      button.textContent = 'Starting Demo...';
+      button.disabled = true;
+
+      try {
+        const response = await fetch('/api/demo/start', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+
+        if (result.sessionToken && result.redirectUrl) {
+          localStorage.setItem('demoToken', result.sessionToken);
+          window.location.href = result.redirectUrl;
+        } else if (result.error) {
+          alert('Error: ' + result.error);
+          button.textContent = originalText;
+          button.disabled = false;
+        }
+      } catch (error) {
+        alert('Failed to start demo. Please try again.');
+        button.textContent = originalText;
+        button.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>
